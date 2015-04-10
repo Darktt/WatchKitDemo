@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <DTWatchKit/DTWatchKit.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -40,6 +43,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWatchEventNotification object:nil userInfo:userInfo];
 }
 
 @end

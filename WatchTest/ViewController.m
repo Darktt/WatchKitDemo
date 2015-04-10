@@ -8,20 +8,78 @@
 
 #import "ViewController.h"
 
+#import <DTWatchKit/DTWatchKit.h>
+
 @interface ViewController ()
+{
+    UIStatusBarStyle _statusBarStyle;
+}
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveWatchEvent:) name:kWatchEventNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.view setUserInteractionEnabled:YES];
+    
+    _statusBarStyle = UIStatusBarStyleDefault;
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return _statusBarStyle;
+}
+
+#pragma mark - Show Alert
+
+- (void)showAlert
+{
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Watch Event" message:@"Hello World !!" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:OKAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+#pragma mark - Notification Oberser
+
+- (void)receiveWatchEvent:(NSNotification *)sender
+{
+    NSDictionary *userInfo = sender.userInfo;
+    
+    if (userInfo.colorChangeEvent) {
+        WKColor *color = userInfo.color;
+        
+        [self.view setBackgroundColor:color.UIColor];
+        
+        _statusBarStyle = (color.whiteColor) ? UIStatusBarStyleDefault : UIStatusBarStyleLightContent;
+        
+        [self setNeedsStatusBarAppearanceUpdate];
+    }
+    
+    if (!userInfo.alertEvent) {
+        return;
+    }
+    
+    [self showAlert];
 }
 
 @end
