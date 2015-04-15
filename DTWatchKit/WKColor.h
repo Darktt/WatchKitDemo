@@ -17,4 +17,11 @@
 
 + (instancetype)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
 
++ (instancetype)redColor;
++ (instancetype)blueColor;
++ (instancetype)greenColor;
+
++ (instancetype)blackColor;
++ (instancetype)whiteColor;
+
 @end

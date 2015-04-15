@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520322C91ADB67A200CEEDB6 /* MapControllerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520322C81ADB67A200CEEDB6 /* MapControllerInterfaceController.m */; };
+		520322CF1ADB6ACF00CEEDB6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520322CC1ADB6AA900CEEDB6 /* MapKit.framework */; };
+		520322D01ADB6AD700CEEDB6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520322CA1ADB6A9C00CEEDB6 /* CoreLocation.framework */; };
+		520322D11ADB6AD900CEEDB6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520322CA1ADB6A9C00CEEDB6 /* CoreLocation.framework */; };
+		520322D21ADB6ADF00CEEDB6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520322CC1ADB6AA900CEEDB6 /* MapKit.framework */; };
 		52213FE71AD6870F007CD998 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52213FE61AD6870F007CD998 /* main.m */; };
 		52213FEA1AD6870F007CD998 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52213FE91AD6870F007CD998 /* AppDelegate.m */; };
 		52213FED1AD6870F007CD998 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52213FEC1AD6870F007CD998 /* ViewController.m */; };
@@ -25,6 +30,7 @@
 		526134861AD7621E001E54AF /* DTWatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5261346F1AD7621E001E54AF /* DTWatchKit.framework */; };
 		526134871AD7621E001E54AF /* DTWatchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5261346F1AD7621E001E54AF /* DTWatchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5261348F1AD76260001E54AF /* DTWatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5261346F1AD7621E001E54AF /* DTWatchKit.framework */; };
+		52A3D8091AD7DAD300DF0E12 /* ColorListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3D8081AD7DAD300DF0E12 /* ColorListController.m */; };
 		52E43B981AD79F1600BD10FF /* NSDictionary+WatchEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E43B961AD79F1600BD10FF /* NSDictionary+WatchEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E43B991AD79F1600BD10FF /* NSDictionary+WatchEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E43B971AD79F1600BD10FF /* NSDictionary+WatchEvents.m */; };
 		52E43B9C1AD7A9BD00BD10FF /* NotificationNames.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E43B9A1AD7A9BD00BD10FF /* NotificationNames.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,6 +89,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		520322C71ADB67A200CEEDB6 /* MapControllerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapControllerInterfaceController.h; sourceTree = "<group>"; };
+		520322C81ADB67A200CEEDB6 /* MapControllerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapControllerInterfaceController.m; sourceTree = "<group>"; };
+		520322CA1ADB6A9C00CEEDB6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		520322CC1ADB6AA900CEEDB6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		52213FE11AD6870F007CD998 /* WatchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52213FE51AD6870F007CD998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52213FE61AD6870F007CD998 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +119,8 @@
 		5261346F1AD7621E001E54AF /* DTWatchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DTWatchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526134721AD7621E001E54AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526134731AD7621E001E54AF /* DTWatchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWatchKit.h; sourceTree = "<group>"; };
+		52A3D8071AD7DAD300DF0E12 /* ColorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorListController.h; sourceTree = "<group>"; };
+		52A3D8081AD7DAD300DF0E12 /* ColorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorListController.m; sourceTree = "<group>"; };
 		52E43B961AD79F1600BD10FF /* NSDictionary+WatchEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WatchEvents.h"; sourceTree = "<group>"; };
 		52E43B971AD79F1600BD10FF /* NSDictionary+WatchEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WatchEvents.m"; sourceTree = "<group>"; };
 		52E43B9A1AD7A9BD00BD10FF /* NotificationNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
@@ -122,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520322D01ADB6AD700CEEDB6 /* CoreLocation.framework in Frameworks */,
+				520322CF1ADB6ACF00CEEDB6 /* MapKit.framework in Frameworks */,
 				526134861AD7621E001E54AF /* DTWatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,7 +144,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520322D11ADB6AD900CEEDB6 /* CoreLocation.framework in Frameworks */,
 				5261348F1AD76260001E54AF /* DTWatchKit.framework in Frameworks */,
+				520322D21ADB6ADF00CEEDB6 /* MapKit.framework in Frameworks */,
 				522140341AD68B20007CD998 /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,10 +161,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520322CE1ADB6AB100CEEDB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				520322CC1ADB6AA900CEEDB6 /* MapKit.framework */,
+				520322CA1ADB6A9C00CEEDB6 /* CoreLocation.framework */,
+				522140331AD68B20007CD998 /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52213FD81AD6870F007CD998 = {
 			isa = PBXGroup;
 			children = (
-				522140331AD68B20007CD998 /* WatchKit.framework */,
+				520322CE1ADB6AB100CEEDB6 /* Frameworks */,
 				52213FE31AD6870F007CD998 /* WatchTest */,
 				526134701AD7621E001E54AF /* DTWatchKit */,
 				5221400F1AD68728007CD998 /* WatchTest WatchKit Extension */,
@@ -197,6 +223,10 @@
 			children = (
 				522140131AD68728007CD998 /* InterfaceController.h */,
 				522140141AD68728007CD998 /* InterfaceController.m */,
+				52A3D8071AD7DAD300DF0E12 /* ColorListController.h */,
+				52A3D8081AD7DAD300DF0E12 /* ColorListController.m */,
+				520322C71ADB67A200CEEDB6 /* MapControllerInterfaceController.h */,
+				520322C81ADB67A200CEEDB6 /* MapControllerInterfaceController.m */,
 				522140161AD68728007CD998 /* NotificationController.h */,
 				522140171AD68728007CD998 /* NotificationController.m */,
 				522140191AD68728007CD998 /* Images.xcassets */,
@@ -355,6 +385,11 @@
 				TargetAttributes = {
 					52213FE01AD6870F007CD998 = {
 						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5221400D1AD68727007CD998 = {
 						CreatedOnToolsVersion = 6.3;
@@ -441,6 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520322C91ADB67A200CEEDB6 /* MapControllerInterfaceController.m in Sources */,
+				52A3D8091AD7DAD300DF0E12 /* ColorListController.m in Sources */,
 				522140181AD68728007CD998 /* NotificationController.m in Sources */,
 				522140151AD68728007CD998 /* InterfaceController.m in Sources */,
 			);
@@ -540,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -578,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

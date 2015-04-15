@@ -9,10 +9,13 @@
 #import "ViewController.h"
 
 #import <DTWatchKit/DTWatchKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ViewController ()
 {
     UIStatusBarStyle _statusBarStyle;
+    
+    CLLocationManager *_locationManager;
 }
 
 @end
@@ -34,6 +37,16 @@
     [self.view setUserInteractionEnabled:YES];
     
     _statusBarStyle = UIStatusBarStyleDefault;
+    
+    _locationManager = [CLLocationManager new];
+    [_locationManager requestWhenInUseAuthorization];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    _locationManager = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +72,7 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-#pragma mark - Notification Oberser
+#pragma mark - Notification Observer
 
 - (void)receiveWatchEvent:(NSNotification *)sender
 {

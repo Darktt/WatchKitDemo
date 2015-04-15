@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -24,29 +24,14 @@
                     </items>
                     <menu key="menu" id="LVk-ik-UUS">
                         <items>
-                            <menuItem title="Red" icon="accept" id="Yrm-SJ-XSs">
+                            <menuItem title="Map" icon="more" id="TUn-wE-EfF">
                                 <connections>
-                                    <action selector="redColor" destination="AgC-eL-Hgc" id="CZq-I2-rfm"/>
+                                    <action selector="showMap" destination="AgC-eL-Hgc" id="Cf9-nh-oCb"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Blue" icon="accept" id="xeq-8e-ys6">
+                            <menuItem title="Baclground Color" icon="more" id="XJb-FE-NsH">
                                 <connections>
-                                    <action selector="blueColor" destination="AgC-eL-Hgc" id="P1l-du-UDF"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Green" icon="accept" id="AH4-wa-LN8">
-                                <connections>
-                                    <action selector="greenColor" destination="AgC-eL-Hgc" id="1TH-1k-o5l"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Black" icon="accept" id="XJb-FE-NsH">
-                                <connections>
-                                    <action selector="blackColor" destination="AgC-eL-Hgc" id="yyd-WA-dzd"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Default" icon="resume" id="0am-oC-lQh">
-                                <connections>
-                                    <action selector="defaultColor" destination="AgC-eL-Hgc" id="XLD-3y-goE"/>
+                                    <action selector="selectBaclgroundColor" destination="AgC-eL-Hgc" id="G0w-6J-mJX"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -69,14 +54,55 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="928"/>
+        </scene>
+        <!--Colors-->
+        <scene sceneID="4iY-qN-4FD">
+            <objects>
+                <controller identifier="ColorList" title="Colors" id="dUC-Yp-Y2R" customClass="ColorListController">
+                    <items>
+                        <table alignment="center" id="XLh-Bh-IGJ">
+                            <items>
+                                <tableRow identifier="ColorListRow" id="ev0-Ij-BTP" customClass="ColorListRow">
+                                    <group key="rootItem" width="1" alignment="left" id="nJs-wJ-21o">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="uha-Ly-J0W"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLable" destination="uha-Ly-J0W" id="Y4I-3M-Xje"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="XLh-Bh-IGJ" id="WpL-4W-5WH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="403"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="7BB-co-IBo">
+            <objects>
+                <controller identifier="Map" title="Map" id="NaR-hw-6Ru" customClass="MapControllerInterfaceController">
+                    <items>
+                        <map alignment="center" id="0va-av-tiw"/>
+                    </items>
+                    <connections>
+                        <outlet property="map" destination="0va-av-tiw" id="A9h-no-XfF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="669"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="468" y="928"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

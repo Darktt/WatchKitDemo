@@ -13,11 +13,8 @@
 @interface InterfaceController()
 
 - (IBAction)trggerButton:(id)sender;
-- (IBAction)redColor;
-- (IBAction)blueColor;
-- (IBAction)greenColor;
-- (IBAction)blackColor;
-- (IBAction)defaultColor;
+- (IBAction)selectBaclgroundColor;
+- (IBAction)showMap;
 
 @end
 
@@ -49,42 +46,14 @@
     [WKInterfaceController openParentApplication:userInfo reply:nil];
 }
 
-- (void)redColor
+- (void)selectBaclgroundColor
 {
-    WKColor *color = [WKColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
-    NSDictionary *userInfo = [NSDictionary colorChangeEventWithColor:color];
-    [WKInterfaceController openParentApplication:userInfo reply:nil];
+    [self pushControllerWithName:@"ColorList" context:nil];
 }
 
-- (void)blueColor
+- (void)showMap
 {
-    WKColor *color = [WKColor colorWithRed:0.0f green:0.0f blue:1.0f alpha:1.0f];
-    NSDictionary *userInfo = [NSDictionary colorChangeEventWithColor:color];
-    [WKInterfaceController openParentApplication:userInfo reply:nil];
-}
-
-- (void)greenColor
-{
-    WKColor *color = [WKColor colorWithRed:0.0f green:1.0f blue:0.0f alpha:1.0f];
-    NSDictionary *userInfo = [NSDictionary colorChangeEventWithColor:color];
-    [WKInterfaceController openParentApplication:userInfo reply:nil];
-}
-
-- (void)blackColor
-{
-    WKColor *color = [WKColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f];
-    NSDictionary *userInfo = [NSDictionary colorChangeEventWithColor:color];
-    [WKInterfaceController openParentApplication:userInfo reply:nil];
-}
-
-- (void)defaultColor
-{
-    WKColor *color = [WKColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f];
-    NSDictionary *userInfo = [NSDictionary colorChangeEventWithColor:color];
-    [WKInterfaceController openParentApplication:userInfo reply:nil];
+    [self pushControllerWithName:@"Map" context:nil];
 }
 
 @end
-
-
-

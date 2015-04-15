@@ -26,6 +26,31 @@
     return color;
 }
 
++ (instancetype)redColor
+{
+    return [self colorWithRed:1.0f green:0.0f blue:0.0f alpha:1.0f];
+}
+
++ (instancetype)blueColor
+{
+    return [self colorWithRed:0.0f green:0.0f blue:1.0f alpha:1.0f];
+}
+
++ (instancetype)greenColor
+{
+    return [self colorWithRed:0.0f green:1.0f blue:0.0f alpha:1.0f];
+}
+
++ (instancetype)blackColor
+{
+    return [self colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f];
+}
+
++ (instancetype)whiteColor
+{
+    return [self colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f];
+}
+
 + (instancetype)colorWithColorComponents:(NSArray *)colorComponents
 {
     WKColor *__autoreleasing color = [[WKColor alloc] initWithColorComponents:colorComponents];
