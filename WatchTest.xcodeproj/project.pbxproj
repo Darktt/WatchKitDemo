@@ -121,6 +121,8 @@
 		526134731AD7621E001E54AF /* DTWatchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWatchKit.h; sourceTree = "<group>"; };
 		52A3D8071AD7DAD300DF0E12 /* ColorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorListController.h; sourceTree = "<group>"; };
 		52A3D8081AD7DAD300DF0E12 /* ColorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorListController.m; sourceTree = "<group>"; };
+		52D615C71AF0A277004937F4 /* WatchTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WatchTest.entitlements; sourceTree = "<group>"; };
+		52D615C81AF0A404004937F4 /* WatchTest WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchTest WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		52E43B961AD79F1600BD10FF /* NSDictionary+WatchEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WatchEvents.h"; sourceTree = "<group>"; };
 		52E43B971AD79F1600BD10FF /* NSDictionary+WatchEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WatchEvents.m"; sourceTree = "<group>"; };
 		52E43B9A1AD7A9BD00BD10FF /* NotificationNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		52213FE31AD6870F007CD998 /* WatchTest */ = {
 			isa = PBXGroup;
 			children = (
+				52D615C71AF0A277004937F4 /* WatchTest.entitlements */,
 				52213FE81AD6870F007CD998 /* AppDelegate.h */,
 				52213FE91AD6870F007CD998 /* AppDelegate.m */,
 				52213FEB1AD6870F007CD998 /* ViewController.h */,
@@ -221,6 +224,7 @@
 		5221400F1AD68728007CD998 /* WatchTest WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				52D615C81AF0A404004937F4 /* WatchTest WatchKit Extension.entitlements */,
 				522140131AD68728007CD998 /* InterfaceController.h */,
 				522140141AD68728007CD998 /* InterfaceController.m */,
 				52A3D8071AD7DAD300DF0E12 /* ColorListController.h */,
@@ -385,7 +389,11 @@
 				TargetAttributes = {
 					52213FE01AD6870F007CD998 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = HHA6P9K77D;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -393,6 +401,12 @@
 					};
 					5221400D1AD68727007CD998 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = HHA6P9K77D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					5221401C1AD68728007CD998 = {
 						CreatedOnToolsVersion = 6.3;
@@ -627,9 +641,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchTest/WatchTest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -637,9 +655,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchTest/WatchTest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WatchTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -678,6 +700,9 @@
 		522140301AD68728007CD998 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchTest WatchKit Extension/WatchTest WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -685,6 +710,7 @@
 				INFOPLIST_FILE = "WatchTest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -692,9 +718,13 @@
 		522140311AD68728007CD998 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchTest WatchKit Extension/WatchTest WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchTest WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
