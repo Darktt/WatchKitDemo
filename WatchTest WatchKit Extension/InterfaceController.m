@@ -25,6 +25,7 @@
 {
     [super awakeWithContext:context];
     
+    
 }
 
 - (void)willActivate
@@ -38,12 +39,22 @@
     [super didDeactivate];
 }
 
+- (void)handleUserActivity:(NSDictionary *)userInfo
+{
+    [super handleUserActivity:userInfo];
+    
+}
+
 #pragma mark - Actions
 
 - (void)trggerButton:(id)sender
 {
     NSDictionary *userInfo = [NSDictionary alertEvent];
     [WKInterfaceController openParentApplication:userInfo reply:nil];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://www.google.com"];
+    
+    [self updateUserActivity:@"com.darktt.watchTest.Activity" userInfo:nil webpageURL:URL];
 }
 
 - (void)selectBaclgroundColor

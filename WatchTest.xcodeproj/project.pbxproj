@@ -389,7 +389,6 @@
 				TargetAttributes = {
 					52213FE01AD6870F007CD998 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = HHA6P9K77D;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -410,6 +409,7 @@
 					};
 					5221401C1AD68728007CD998 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = HHA6P9K77D;
 					};
 					5261346E1AD7621E001E54AF = {
 						CreatedOnToolsVersion = 6.3;
@@ -669,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -687,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IBSC_MODULE = WatchTest_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchTest WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;

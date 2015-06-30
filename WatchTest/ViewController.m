@@ -29,6 +29,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveWatchEvent:) name:kWatchEventNotification object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setupUserActivity];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,6 +65,17 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return _statusBarStyle;
+}
+
+#pragma mark - Setup Activity
+
+- (void)setupUserActivity
+{
+    NSUserActivity *__autoreleasing activity = [[NSUserActivity alloc] initWithActivityType:@"com.darktt.watchTest.Activity"];
+    [activity setTitle:@"Hand Off from Watch"];
+    
+    self.userActivity = activity;
+    [self.userActivity becomeCurrent];
 }
 
 #pragma mark - Show Alert
